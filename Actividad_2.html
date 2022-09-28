@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        button {
+          margin: 4px;
+          padding: 8px 8px 3px;
+          box-shadow: inset 0px 0px 5px #888888;
+        }
+
+   
+    </style>
+</head>
+<body>
+  
+   
+      <!--Ejercicio 1-->
+        <div class="calculadora">
+          
+            <h1><b>Resultado:</h1>
+
+          <div>
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+            <button type="button" class="operator" value="/">&divide;</button>
+          </div>
+      
+ 
+          <div>
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+            <button type="button" class="operator" value="*">&times;</button>
+          </div>
+
+      
+          <div>
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+            <button type="button" class="operator" value="+">+</button>
+          </div>
+
+      
+          <div>
+            <button type="button" value="0">0</button>
+            <button type="button" class="equal-sign" value="=">=</button>
+            <button type="button" class="operator" value="-">-</button>
+          </div>
+  
+        </div>
+
+      <!--Ejercicio 2-->
+      <p>Ingrese su nombre: <input type="text" name="nombre" size="40"></p>
+      <p>Selección la foto:  <input type="file"> </p>
+      <p><input type="submit" value="Enviar"></p>
+
+      <!--Ejercicio 3-->
+      <form action="ejemplo.php" method="get">        
+      <fieldset>
+          <legend>Datos personales:</legend>
+          <p>Apellido y nombre:  <input type="text" name="nombre" size="40"> </p>
+          <p>Documento de identidad: <input type="text" name="nombre" size="40"></p>
+          <p>Fecha de nacimiento:  <input type="text" name="nombre" size="40"> </p>
+          <p>Dirección:  <input type="text" name="nombre" size="40"> </p>
+        </div>
+      </fieldset>
+
+      <form action="ejemplo.php" method="get">   
+        <fieldset>
+            <legend>Datos Laborales:</legend>
+            <p>Nombre de empresa:  <input type="text" name="nombre" size="40"> </p>
+            <p>Actividad: <input type="text" name="nombre" size="40"></p>
+            <p>Direccion: <input type="text" name="nombre" size="40"></p>
+        </fieldset>
+      </form>
+      
+      <!--Ejercicio 4-->
+
+      <form action="registrardatos.php" method="post">
+        Apellido y nombre:
+        <input type="text" name="nombre" size="30"><br>
+        Es mayor de edad?:<br>
+        <input type="radio" name="radio1" checked value="si">Si<br>
+        <input type="radio" name="radio1" value="no">No<br>
+        Telefono:
+        <input type="text" value="453-" name="telefono" size="15"><br>
+        <textarea name="comentarios" rows="5" cols="40">Ingrese aqui sus comentarios</textarea><br>
+        <input type="submit" value="Enviar">
+      </form>
+
+      <!--Ejercicio 5-->
+    
+      <form action="registrardatos.php" method="post">
+        <input type="text" name="text1" size="5" tabindex="1">
+        <input type="text" name="text2" size="5" tabindex="4">
+        <input type="text" name="text3" size="5" tabindex="7">
+        <br>
+        <input type="text" name="text4" size="5" tabindex="2">
+        <input type="text" name="text5" size="5" tabindex="5">
+        <input type="text" name="text6" size="5" tabindex="8">
+        <br>
+        <input type="text" name="text7" size="5" tabindex="3">
+        <input type="text" name="text8" size="5" tabindex="6">
+        <input type="text" name="text9" size="5" tabindex="9">
+        <br>
+        <input type="submit" value="enviar" tabindex="10">
+      </form>
+
+
+      </body>
+    </html>
