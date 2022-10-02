@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<title>Maquetación de contenedores</title>
+		<meta charset="UTF-8"/>
+
+
+
+
+        <style>
+		
+			header{
+				background-color:#ff6666;
+				height: 19%;
+				width: 99%;
+				border: 3px solid grey;				
+				border-radius: 15px;
+				margin: 5px;
+
+				display: flex;
+				justify-content: center;/*Alineación en horizontal*/
+				align-items: center;/*alineación en vertical*/
+            }
+			nav{
+				background-color:#ffff99;
+				height: 5%;
+				width: 99%;
+				border: 3px solid grey;				
+				margin: 5px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			section{
+				float:left;
+				width: 73%;
+				height: 40%;
+				margin: 5px;
+				margin-right:0;
+			}
+
+			#Articulo1{
+				background-color:#4da6ff;
+				height: 38%;				
+				border: 4px dashed;	
+				border-radius: 20px;
+				margin-bottom: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#Articulo2{
+				background-color:#4da6ff;
+				height: 58%;		
+				border: 4px dotted;	
+				border-radius: 90px;
+				margin-bottom: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}			
+			aside{
+				 display: flex;
+				 float:right;
+				 width: 23%;
+				 height: 40%;
+				 background-color:  #99ffbb;
+				 border: 10px solid;
+				 border-radius: 5px;
+				 justify-content: center;
+				 align-items: center;
+				 margin: 5px;
+				 margin-left:0;
+			}
+			footer{
+				background-color: #cc99ff;
+				height: 3%;
+				width: 99%;
+				border: 2px solid;				
+				margin: 5px;
+
+				display: flex;
+
+				justify-content: center;
+				align-items: center;
+			}
+
+            
+			/*Diseño responsive o flexible*/
+			@media only screen and (max-width: 765px) {
+				h1{
+					font-size:15;
+					}
+				header{
+					height: 7%;
+				}
+				section, aside{
+					width: 97%;
+					height: 15%;
+				}
+				aside{
+					float:left;
+					border: 5px solid;
+					margin-top: 3%;
+				}
+			}
+        </style>
+		<!--
+		Diseño responsive o flexible: al descender el tamaño de pantalla reporporciona los elementos
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+
+
+    </head>
+
+
+
+    <body>
+
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <nav>
+            <h1>Nav</h1>
+        </nav>
+
+		<section>
+            <article id="Articulo1">
+                <h1>Article 1</h1>        
+            </article>
+            <article id="Articulo2">
+                <h1>Article 2</h1>
+            </article>
+        </section>
+
+        <aside>
+            <h1>Aside</h1>
+        </aside>
+
+        <footer>
+            <h1>Footer</h1>
+        </footer>
+        
+    </body>
+
+
+
+
+
+</html>

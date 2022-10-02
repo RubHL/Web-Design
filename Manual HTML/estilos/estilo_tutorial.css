@@ -1,0 +1,73 @@
+
+/*Selector de etiqueta*/
+body{ 
+ background-color:rgb(201, 201, 201);
+ 
+}
+
+/*Selector de ID*/
+#Etiqueta_Unica {
+background-color: aqua;
+width: 500px;
+text-align: center;
+margin: 15px auto;
+border: 3px solid black;
+border-radius: 20px;
+font: bold 26px Verdana;
+box-shadow: chocolate 5px 7px 5px;
+text-shadow: red 3px 4px 6px;
+}
+
+/*Selector de Clase*/
+.Etiqueta_de_Clase{
+
+}
+
+
+/*Selector de Nombre*/
+p[name="parrafo_rosa"]{
+    color: rgb(241, 36, 224);
+}
+
+p[name^="parra"]{ /*que empiece por parra */
+    color: rgb(241, 36, 224);
+}
+
+p[name$="osa"]{ /*que termine por osa */
+    color: rgb(241, 36, 224);
+}
+
+p[name*="afo"]{ /*en elagun punto aparece afo */
+    color: rgb(241, 36, 224);
+}
+
+
+/*Pseudo Clases*/
+p:nth-child(1){ /*primer hijo del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+}
+p:nth-child(2){ /*segundo hijo del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+}
+p:nth-child(3){ /*tercer hijo del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+}
+
+
+p:nth-child(even){ /*hijos pares del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+}
+p:nth-child(odd){ /*hijos impares del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+}
+
+
+p:first-child{ /*primer hijo del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+}
+p:last-child{ /*primer hijo del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+}
+p:only-child{ /*unico hijo del elemento padre principal (sea cual sea)*/
+    color: rgb(241, 36, 224);
+} 

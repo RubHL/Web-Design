@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina sobre monos"/> 
+    <meta name="Keywords" content="monos, chimpances, simios"/> 
+    <link rel="shortcut icon" href="ico.png"/>
+    <link rel="stylesheet" href="estilos.css">
+
+    
+    
+    <title>Mundo simio - Formulario</title>
+
+    
+
+</head>
+
+<body>
+    
+
+    <header>
+        <h1>Mundo Simio</h1>
+    </header>
+
+
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Habitat.html"> Habitat </a> 
+                </li>
+                <li>
+                    <a href="Alimentacion.html"> Alimentación </a>      
+                </li> 
+                <li>
+                    <a href="Formulario.html"> Formulario </a>                 
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+ 
+        
+
+        <article>
+            
+            <h2>¡Apadrina un Mono!</h2>
+            <p>Rellena el siguiente formulario con tus datos para que podamos enviarte un mono a casa
+                 </p>
+
+
+                 <form action="url" enctype="text/plain" name="formulario">
+
+                 <h3>Introduce tu usuario y una imagen tuya</h3>
+                 usuario: <input type="text" name="usuario"> <br><br>
+                 contraseña: <input type="password" name="contraseña"><br><br>
+                 <input type="file" name="foto">
+                
+
+                 <h3>¿Que especie de mono quieres?</h3>
+                 <input type="checkbox" name=chimpance value="Chimpance"> <label>Chimpancé</label>  <br>
+                 <input type="checkbox" name=macaco value="Macaco"> <label>Macaco</label>           <br>
+                 <input type="checkbox" name=Gorila value="Gorila"> <label>Gorila</label>           <br>
+
+
+                 <h3>¿Cuantos monos eres capaz de mantener?</h3>
+                 <input type="radio" name="1" value="1" checked> <label>1</label>
+                 <input type="radio" name="1" value="2" > <label>2</label>
+                 <input type="radio" name="1" value="3" > <label>3</label> 
+                 <input type="radio" name="1" value="indefinidos"> <label>indefinidos</label>       <br>
+
+                <h3>Selecciona el metodo de pago</h3>
+                <select name="pago">
+                    <option value="Tarjeta">Tarjeta</option>
+                    <option value="Paypal">Paypal</option>
+                </select>   <br><br>
+
+                <h3>Establece una fecha de recogida</h3>
+                <input type="date" name="recoger">
+
+                <br><br><br><br>
+
+                 <input type="submit" name="Envio" value="Enviar"/>
+                 <input type="reset" name="Restablecer" value="Restablecer"/>
+
+
+                </form>
+
+        </article>
+
+    
+
+    <footer>
+        <a href="Index.html"> <img src="c.png"></a>
+    </footer>
+
+
+</body>
+
+</html>

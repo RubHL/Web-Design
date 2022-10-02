@@ -1,0 +1,156 @@
+<!--Hyper Text Markup Lenguage (Lenguaje de Marcas de Hiper Texto)-->
+<!--ESTRUCTURA/CONTENIDO BASICO-->
+<!--Llamo al archivo index.html para que el navegador sepa que es la página principal-->
+
+<!DOCTYPE html> <!--Especifcia a la página que versión de html va a usar (HTML 5)-->
+
+<html lang="en"> <!--Guarda y Define toda la pagina web-->
+
+    <head> <!-- Metadatos y contenido que no es visible,  es información para el navegador-->
+
+        <meta charset="utf-8" /> <!-- Para que los textos que definamos abarque de todo-->
+
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <title>Guia HTML</title>
+
+    </head>
+
+    <body> <!--Todo aquello que verá el usuario-->
+
+        <h1>Titular principal</h1>
+        <h2>Titular secundario</h2>
+        <h3>Titular terciario</h3>
+        <h4>Titular cuaternario</h4>
+        <h5>Titular quintinario</h5>
+        <h5>Titular exatario</h5>
+
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Distinctio iure maiores debitis esse officiis praesentium hic 
+            consequuntur quia corrupti nemo perferendis placeat at natus maxime quae, 
+            atque exercitationem culpa! Veritatis.</p>
+
+
+            <p>Todo el texto que yo quiera</p>
+            <p>Todo el texto que yo quiera</p>
+
+            <br><br><br> <!--Se suma el espacio que deja el párrafo con los br-->
+
+            <!--Si yo no lo contengo en un párrafo no añadirá ningun salto de línea-->
+            Todo el texto que yo quiera
+            Todo el texto que yo quiera
+            
+            <br><br><br>
+
+            Todo el texto que yo quiera <br/> <!--Las etiquetas que hacen una funcionalidad no tienen contenido de texto por eso se cierran con la barra al final-->
+            Todo el texto que yo quiera
+
+            <hr> = <hr/> <!--Otra etiqueta de funcionalidad, ni siquiera hace falta la barra-->
+
+        <!-------------------------LISTAS--------------------------->
+
+            <h1>Listas</h1>
+
+            <ul> <!--Lista desordenada (unordered list)-->
+                <li>Adidas</li> <!--Elemento de lista-->
+                <li>Nike</li>
+                <li>Reebok</li>
+                <li>Puma</li>
+            </ul>
+
+            <ol> <!--Lista ordenada (ordered list)-->
+                <li>Adidas</li> <!--Elemento de lista-->
+                <li>Nike</li>
+                <li>Reebok</li>
+                <li>Puma</li>
+            </ol>
+
+            <hr/> <!------------------------>
+            
+
+            <h1>Listas Menú</h1>
+
+            <ul>
+                 <li>    <!--La etiqueta <a><a/> indica que es un enlace y el atributo href DONDE te lleva-->
+                    <a href="index.html">Inicio</a>
+                </li>
+
+            
+                <li>
+                     <a href="contacto.html">Contacto</a> 
+                /li>
+            </ul>
+
+
+            <hr/> <!------------------------>
+
+            <h1>Tablas</h1>
+
+            <table border="1">
+                <tr> <!-- Filas -->
+                    <td>Nombre</td> <td>Apellidos</td> <td>Web</td> <!-- Columnas -->
+                </tr>
+    
+                <tr> 
+                    <td>Ej1</td> <td>Ej2</td> <td>Ej3</td> 
+                </tr>
+    
+                <tr> 
+                    <td>Ej4</td> <td>Ej5</td> <td>Ej6</td> 
+                </tr>
+    
+            </table>
+    
+            <hr/> <!------------------------>
+
+
+            <h1>Formularios</h1>
+            <p>Formulario de contacto</p>
+    
+            <form>
+    
+                <label for="">Nombre</label>
+                        <input type="text"/>   <!--Que tipo de input quiero crear, que tipo de CAMPO-->         
+    
+                <label for="">Apellidos</label>
+                        <input type="text"/> 
+                        
+                <br/>      
+    
+                <label for="">Email</label>
+                        <input type="email"/> <!-- Campo de tipo Email, solo permite introducir Emails-->
+    
+                    <select>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select>
+    
+            <input type="submit" value="Enviar">    <!--El value es el texto que aparecerá-->
+                <!--De tipo enviar-->
+            </form>
+
+
+
+
+        <!------------------------MEDIA---------------------------->
+
+        <h2>Imágenes</h2>
+         <!--Atributos de la Etiqueta que le dán unos valores extra-->
+         <!--Al ser una etiqueta que no tiene contenido de texto se ciera con la barra al final-->
+        <img alt="Si no se carga la imagen que sepas que esto es
+        un mono (texto alternativo)" src="https://www.redaccionmedica.com/images/destacados/china-notifica-la-primera-muerte-de-un-humano-por-el-virus-del-mono-b-4471_620x368.jpg" />      
+        <br/>    
+        <img width="150p" alt="texto alternativo" src="https://www.redaccionmedica.com/images/destacados/china-notifica-la-primera-muerte-de-un-humano-por-el-virus-del-mono-b-4471_620x368.jpg"/>
+
+        <!--Imagen Local, si estuviera en otra carpeta dentro de la carpeta raiz seria img/mono.jpg-->
+        <img width="200p" src="mono.jpg" alt="Otro mono"/>
+
+    </body>
+
+
+</html>

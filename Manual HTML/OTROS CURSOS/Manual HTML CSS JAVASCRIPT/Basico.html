@@ -1,0 +1,100 @@
+
+<!-- * Existen 2 estructuras en HTML: block y inline, por defecto todas las etiquetas se muestran en block-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="pagina manual, esto lo usa google para Categorizar la web"/> <!--Categorizacion de Google-->
+    <meta name="keywords" content="manual,guia,tutorial"/> <!--Categorizacion de Google-->
+    <title>Pagina Manual</title> <!--Categorizacion de Google-->
+
+    <script src="./archivo" defer></script>
+    <link rel="stylesheet" href="hojadeestilos.css"/>
+    
+</head>
+
+
+<body>
+    <header id="TituloPrincipal"> <!--Lo usan los navegadores para estructurar la web-->
+        <span id="ElSpanEsParaEsto"><h1>Elementos de html5</h1></span> <!--Categorizacion de Google--> <!--Solo puede haber un h1 por pagina-->
+    </header>
+
+    <nav id="NavPrincipal">
+     <ul id="navli">
+        <li>Basico</li>
+        <li>Multimedia</li>
+     </ul>
+    </nav>
+
+
+    <aside id="barralateral">
+        Aqui iria publi
+    </aside>
+
+
+    <section id="Seccion">
+        <article> <!--Agrupa contenido similar-->
+            <header>
+                <hgroup>
+                    <h2>Titulo de la noticia 1</h2>
+                    <h3>Subtitulo de la noticia 1</h3>
+                </hgroup>
+            </header>
+            <p>Noticia 1</p>
+            <p>Seguimos hablando de noticia 1</p>
+            <p>Terminamos de hablar de noticia 1</p>
+            <footer>
+                <p>Comentario de los usuarios</p>
+            </footer>
+        </article>
+
+        <article> <!--Agrupa contenido similar-->
+            <header>
+                <h2>Subtitulo de la noticia 1</h2>
+            </header>
+            <p>Noticia 2</p>
+            <p name="parrafos">Seguimos hablando de noticia 2</p>
+            <p>Terminamos de hablar de noticia 2</p>
+            <footer>
+                <p>Comentario de los usuarios</p>
+            </footer>
+        </article>
+
+        <article> <!--Agrupa contenido similar-->
+            <header>
+                <hgroup>
+                    <h2>Titulo de la noticia 1</h2>
+                    <h3>Subtitulo de la noticia 1</h3>
+                </hgroup>
+            </header>
+
+            <figure> <!--Lo usan los navegadores para estructurar la web-->
+            <img src="imagenes/circulo-de-color.png" alt="colorines"/>
+            <figcaption>Pie de imagen</figcaption>
+            </figure>
+
+            <p>Noticia 3</p>
+            <p>Seguimos hablando de noticia 3</p>
+            <p>Terminamos de hablar de noticia 3</p>
+        </article>
+    </section>
+<!--
+    <div>
+        <h2> final del video 5, tipos de resaltado de texto</h2>
+        <table>
+            <tr></tr>
+        </table>
+    </div>
+-->
+    <footer id="FooterPrincipal" >
+        <ol>
+            <li><small>Derechos</small></li>
+            <li>Telefono</li>
+        </ol>
+    </footer>
+</body>
+</html>
