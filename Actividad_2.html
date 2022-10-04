@@ -17,9 +17,9 @@
    
     </style>
 </head>
+
 <body>
   
-   
       <!--Ejercicio 1-->
         <div class="calculadora">
           
@@ -56,11 +56,15 @@
           </div>
   
         </div>
+      <br>
+      <hr>
 
       <!--Ejercicio 2-->
       <p>Ingrese su nombre: <input type="text" name="nombre" size="40"></p>
       <p>Selección la foto:  <input type="file"> </p>
       <p><input type="submit" value="Enviar"></p>
+      <br>
+      <hr>
 
       <!--Ejercicio 3-->
       <form action="ejemplo.php" method="get">        
@@ -81,9 +85,10 @@
             <p>Direccion: <input type="text" name="nombre" size="40"></p>
         </fieldset>
       </form>
-      
-      <!--Ejercicio 4-->
+      <br>
+      <hr>
 
+      <!--Ejercicio 4-->
       <form action="registrardatos.php" method="post">
         Apellido y nombre:
         <input type="text" name="nombre" size="30"><br>
@@ -95,9 +100,10 @@
         <textarea name="comentarios" rows="5" cols="40">Ingrese aqui sus comentarios</textarea><br>
         <input type="submit" value="Enviar">
       </form>
+      <br>
+      <hr>
 
-      <!--Ejercicio 5-->
-    
+      <!--Ejercicio 5-->  
       <form action="registrardatos.php" method="post">
         <input type="text" name="text1" size="5" tabindex="1">
         <input type="text" name="text2" size="5" tabindex="4">
@@ -113,7 +119,76 @@
         <br>
         <input type="submit" value="enviar" tabindex="10">
       </form>
+      <br>
+      <hr>
 
+      <!--Ejercicio 6-->  
+      <form action="registrardatos.php" method="post">
+        Seleccione la sección donde desea ingresar:
+        <br>
+        <input type="radio" name="seccion" value="1" disabled>Niños<br>
+        <input type="radio" name="seccion" value="2">Adolescentes<br>
+        <input type="radio" name="seccion" value="3">Mayores<br>
+        <input type="submit" value="Enviar">
+      </form>
+      <br>
+      <hr>
+
+      <!--Ejercicio 7-->  
+      <form action="/registrardatos.php" method="post">
+      Ingrese su nombre:<input type="text" name="nombre" maxlength="20" size="20"> <br>
+      Ingrese su clave:<input type="password" name="clave" maxlength="12" size="12"> <br>
+      <input type="submit" value="enviar"></form>
+      <br>
+      <hr>
+
+      <!--Ejercicio 8-->  
+      <form action="http://www.htmlya.com.ar/simulador/registrardatos.php" method="post">
+        Ingrese su nombre:
+        <input type="text" name="nombre" size="30" value="Interpolacion" readonly><br>
+        Contrato:<br>
+        <textarea name="comentarios" rows="5" cols="60" 
+        readonly>
+        Por la presente ..............................
+        </textarea> 
+        <br>
+        <input type="submit" value="Enviar">
+      </form>
+      <br>
+      <hr>
+
+      <!--Ejercicio 9--> 
+      <h2>Reclamos</h2>
+      <form action="mailto:reclamos@gmail.com" method="post" enctype="text/plain">
+        Ingrese su nombre: 
+        <input type="text" name="nombre" size="20">
+        <br>
+        Ingrese su dirección: 
+        <input type="text" name="direcci�n" size="30">
+        <br>
+        Informe del problema:
+        <br>
+        <textarea rows="5" cols="40" name="problema"></textarea>
+        <br>
+        <input type="submit" value="enviar">
+      </form>
+      <br>
+      <hr>
+
+      <!--Ejercicio 10-->  
+      <form action="registrardatos.php" method="post">
+        <fieldset>
+        <legend>Formulario de comentarios.</legend>
+        <label for="nombre">Ingrese su nombre:</label>
+        <input type="text" name="nombre" size="30" id="nombre"><br>
+        <label for="mail">Ingrese su mail:</label>
+        <input type="text" name="mail" size="50" id="mail"><br>
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea name="comentarios" rows="5" cols="60" id="comentarios"></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+        </fieldset>
+        <br>
 
       </body>
     </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+    <script>
+        function Ej_Calendar(){
+            var fecha_act=new Date();
+            var fecha_fut=new Date(2023, 1, 1);
+
+            var fecha_rest=fecha_fut - fecha_act;
+
+            document.write("Quedan " + fecha_rest + "dias");
+        }
+        function Prop_num(){
+            document.write("Max_value"+ Number.MAX_VALUE);
+            document.write("Max_value"+ Number.MAX_VALUE);
+
+            document.write("Max_value"+ Number.NEGATIVE_INFINITY);
+            document.write("Max_value"+ Number.MAX_VALUE);
+
+            var N1 = 14.384923472304;
+            document.write(N1.toPrecision(3));
+        }
+        function Prop_texto(){
+            var texto=new String("Prueba de texto");  
+            document.write(texto.lenght + "<br>");
+            document.write(texto.italics() + "<br>");
+            document.write(bold() + "<br>");
+            document.write(fontcolor("#FF00000") + "<br>");
+            document.write(fontcolor("blue") + "<br>");
+            document.write(fontsize(20) + "<br>");
+            document.write(strike() + "<br>");
+        }
+        function Ej_Navigator(){
+
+            document.write(navigator.userAgent)
+
+            if(navigator.javaEnabled)
+            document.write("ACTIVADO");
+            else
+            document.write("NO_ACTIVADO")
+            
+        }
+
+                function moverVentana(){
+                     
+                mi_ventana.moveBy(5,5); //Movimiento relativo respecto a la posicion anterior
+                
+                i++;
+                if (i<50){
+                    setTimeout('moverVentana()', 100);
+                }else{
+                    mi_ventana.close();
+                }
+                }
+        
+        // ==================================================================
+    </script>
+</head>
+
+<body>
+    <script>
+        var opciones="left=100,top=100,whidt=250,height=150",i=0;   //var i= 0;
+        mi_ventana= window.open("","",opciones) //window.open("","","left=100,top=100,whidt=250,height=150");
+        //mi_ventan= window.open() Sin no pones parametros, saldra a pantalla completa o como nueva pestaña 
+        mi_ventana.document.write("prueba");
+
+        mi_ventana.moveTo(400,100);
+            
+        moverVentana();
+        
+        document.write("<h1>Titulo</h1>");
+    </script>
+
+<!-- setTimeout('location.reload()',500); -->
+
+<script>      
+        var ventanaSecundaria=window.open("","ventanaSec","whidt=250,height=150");
+</script>
+<input type="button" value="mostar urlasknd a" onclick="ventanaSecundaria.location=document.formulario.url.value;">
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,1 @@
+alert("Prueba de script en fuente externa");
