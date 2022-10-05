@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="utf-8" />
+<title>Guia CSS</title>
+<link rel="stylesheet" href="css.css"/>
+
+<!-- <style>  Tengo 3 tipos de selectores: 1º Etiqueta, 2ºId , 3º Clase 
+
+
+
+
+body{
+    background: lightblue;  Hay mucho colores expresados en texto, pero NO todos 
+}
+
+#container{
+
+}
+
+.article{
+
+}
+
+
+
+</style> -->
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+    
+
+<!--Div (division) que contenga toda la página Web para darle un ancho fijo-->
+<div id=container> <!-- Un div básicamnete es una caja-->
+
+
+
+
+
+
+    <header> <!-- div que hace referencia a la cabecera del sitio Web, es una etiqueta semántica para el SEO-->
+        <h1>CSS</h1>
+
+
+    </header>
+
+
+
+    <!--******************************************************************-->
+
+
+
+    <nav> <!--Tambien es una etiqueta semántica, define una barra de navegación, un menú -->
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    FAQS
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    correo
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!--******************************************************************-->
+
+    <!---------------------------------------------------->
+    <div class="clearfix"></div> <!--Para que no se suba con el Float-->
+    <!---------------------------------------------------->
+
+
+
+    <section id="content">  <!-- Solo son divs semánticos, mejor para SEO y para entendimiento-->
+
+        <article class="article">
+            <h2>Titulo del Articulo</h2>
+            <p>Texto del articulo</p>
+        </article>
+
+        <article class="article">
+            <h2>Titulo del Articulo</h2>
+            <p>Texto del articulo</p>
+        </article>
+
+        <article class="article">
+            <h2>Titulo del Articulo</h2>
+            <p>Texto del articulo</p>
+        </article>
+
+        <article class="article">
+            <h2>Titulo del Articulo</h2>
+            <p>Texto del articulo</p>
+        </article>
+
+    </section>
+
+
+
+    <!--******************************************************************-->
+
+
+    <aside> <!--Semanticamente representa un barra lateral-->
+
+        <h2>Aside</h2>
+
+        <form>
+
+            <input type="text">
+            <input type="submit" value="Buscar">
+
+        </form>
+
+    </aside>
+
+
+    <!--******************************************************************-->
+
+   <!---------------------------------------------------->
+   <div class="clearfix"></div> <!--Para que no se suba con el Float-->
+   <!---------------------------------------------------->
+
+    <footer>
+        Fin de la pagina &copy; 2021    <!--&copy te pone un simbolito-->
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>

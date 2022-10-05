@@ -1,0 +1,366 @@
+<!--HTML5 es un estándar que auna 3 tecnologías CSS[Formato/apariencia],HTML[estructura],JAVASCRIPT[Interactividad y animación]-->
+<!--HTML es muy flexible, auque este mal escrito algunas cosas, algunos navegadores pueden presentarlo bien-->
+<!--Las etiquetas pueden ir en mayusculas pero se considera mas correcto en html5 que vayan en minusculas-->
+<!--No todas las webs se ven igual en todos los navegadores , es una buena practica en un desarollador web, instalar todos los navegadores -->
+<!--Versiones anteriores de navegadores no interpretan bien html 5-->
+
+<!--Tiene que ser la primera etiqueta de todas-->
+<!DOCTYPE html> <!--Hace referencia a la version de html que voy a usar para programar (novedad HTML5) Esta web va a ser programada siguiendo el stándar HTML5--> 
+<!--iNFO importante para otros programadores/los navegadroes-->
+
+
+
+
+<html lang="es"> <!--------------------------------------->
+
+
+
+
+<head> <!--Sirve para incluir informacion vital de la página (NO SE VE)--> <!--Head no lleva atributos-->
+    <!--info adicional que indica que nuestra pagina va estar en español-->
+
+
+
+<!--Las etiquetas que no tienen par de cierre se indican en HTML5 con una barra de cierre al final-->
+<meta charset="iso-8559-1"/> <!--Hace referencia a la CODIFICACION de caracteres, especifica como será presentado el texto de la web en pantalla, determina si la web tiene caracteres UNICODE,latinos,chinos,etc-->
+<meta charset="utf-8"/> <!--Actualmete se designa asi-->
+
+
+<!--Se encunetra cada ves más en desuso------------------------------------------------------------------------------------->
+<meta name="description" content="Pagina para aprender HTML 5"/> <!--Descripcion de la tematica de la web, fundamental para los navegadores, CATEGORIZAN la web-->
+<meta name="Keywords" content="html5, css3, JavaScript, diseño web"/> <!--Antiguamente era muy importante y se abusaba de él-->
+<!--si abusas con KW, los buscadores te penalizan colocandote en los resultados menos relevantes o incluso que no aparezca-->
+<meta http-equiv=“Refresh” content=“5; URL=http://nuevaURL.com” />
+
+
+<title>Titulo de la pestaña</title> <!--Da igual ponerlo arriba de las metas, normalmente se pone abajo-->
+<!--muy importante para que la pagina aparezca correctamente indexada-->
+<!--Los buscadores lo usaran para ategorizar la pagina correctamnete e indexarla correctamente-->
+<!--Los buscadores le dan mas importancia a title que meta name="keywords" aunque tambien la tiene en cuenta-->
+
+
+<link rel="stylesheet" href="CssIntroduccion.css"/>
+<!--Suele ir despues de title, influye ligeramente su posicion-->
+<!--rel significa relativo o relacionado-->
+
+</head>
+
+
+
+
+<body>
+
+
+
+    <header id="cabeceraweb"> <!--A priori esta etiqueta si la borro no cambia nada, pero gracias a ella se puede ver en multitud de dispositivos-->
+        <h1>Titulo 1: MONOS (h1)</h1> <!--Los navegadores lo miran bastante,porque se supone que es de lo que habla tu web-->
+    </header>
+
+
+
+
+    <nav> <!--informa al navegador del dispositivo como esta estrcturado el documento-->
+
+        <ul> <!--UnorderList-->
+            <li>Quienes somos</li>
+            <li>Nuestros porductos</li>
+            <li>contactanos</li>
+            <li>precios</li>
+        </ul>
+    </nav>
+
+
+
+
+    <aside> <!--informa al navegador del dispositivo como esta estrcturado el documento-->
+        <!--se suele utilizar como barra de vínculos-->
+
+        <blockquote>Primer elemento </blockquote> <!--Se utiliza para larga citas-->
+        <blockquote>Segundo elemento</blockquote>
+        <blockquote>Tercer elemento</blockquote>
+
+    </aside>
+
+
+    <main>
+
+
+        <section> <!--Contenido principal-->
+
+
+
+
+
+            <article> <!--agrupa contenidos similres-->  
+
+                <header> <!--Header es flexible, puede usarse aqui por ejemplo-->
+               
+                    <hgroup> <!--Solo Cuando hay MAS de UNA etiqueta h, asi el navegador sabe que titulos y subtitulos van juntos-->
+                        <!--Si solo tienes un h no se usa hgroup, sirve para agrupar titulos y subtitulos-->
+                        <h2>Titulo de la noticia 1 (h2)</h2>
+                        <h3>Sirve par poner un subtitulo (h3)</h3>
+                    </hgroup>
+
+                </header>
+
+
+
+                <!--Alrededor de cada floto estable un contentedor (block)-->
+                <figure> <!--Insertar elementos  que tienen que ver con el contenido pero son independientes (imagenes,videos,flash,..) , es nuevo en HTML5 -->
+                
+
+                    <img src="img/mono.jpeg" alt="aqui hay un mono"/> <!--Src= Source(fuente) Alt= Alternative Text-->
+
+                    <!-- Formatos de imagen COMPRIMIDOS (porque aceleran la descarga) aceptados por las paginas web (otros no son o recomedables o aceptados, no ):
+
+                    1. JPG (Puede estar mas o menos comprimido, no admite trasparencia)
+                    2. GIF (Pesan muy poco y permiten animacion(secuencia de imgenes), solo admite 256 colores, es apto para representar botones o imagenes pequeñas y basicas, admite trasparencia)
+                    3. PNG (8 bits y 16 bits, varia en la cantidad de colores, admite trasparencia ) -->
+
+                    <figcaption> <!--Pie de imagen, tiene que estar dentro de figcaption-->
+                        Esto es un mono de Indoesia
+                    </figcaption> <!--No es tanto la idea de construir ula estructura web, sino de darle una semantica estructural, para que cualquier dispositivo sepa interpretar mejor la web-->
+
+                </figure>
+
+
+
+                <h2>titulo 2 (h2)</h2> 
+
+                <p>Noticia 1</p>
+                <p>Seguimos hablando de noticia 1 </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <mark> Marca un texto sin importancia ni enfasis, solo para las circunsatncias del
+                momento, un ejemplo perfecto seria el buscador ctr + f </mark> soluta laborum saepe quae at fuga, 
+                accusamus quo odit quia, unde et <em>Sustituye en la actualidad, en html 5 a la etiqueta( <i>Lo que hacia i era poner el texto en cursiva, pero esta en deshuso</i> ) en html5 se usa para dar 
+                énfasis, para enfatizar un término  </em> <!-- Lo  importante no es lo visual, sino lo semántico-->
+                aperiam <strong>Para marcar texto importante, esta sutuyendo a la etiqueta <b> b, que viene a ser lo mismo </b></strong> quas earum alias totam impedit laudantium.</p>
+                <!--El strong lo miran basatante a la hora de posicionar las websy categorizar-->
+
+
+                <footer id="degradado">
+                    <p>comentarios de usuraios</p>
+                </footer>
+
+            </article>
+
+
+
+            <article> <!--Se supone que no tiene que ver con la noticia de arriba-->
+
+                <header>
+                    <h2>Titulo de la noticia 2 (h2)</h2>
+                </header>
+
+             <p>Noticia 2</p>
+             <p>Seguimos hablando de noticia 2 </p>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            
+                Cite (nueva en html 5 ) Sirve para resaltar 
+                titulos de libros, peliculas , trabajos propios etc Ej: <cite>"Lo que el viento se llevo"</cite> 
+            
+            
+                ad repellendus totam quidem eius, 
+                earum numquam! Iusto sed id, minus in, modi magni harum beatae vel ratione maiores amet sequi!</p>
+
+
+
+
+            
+
+                
+                <img class="Contenedor_Imagen" src="img/mono.jpeg" alt="aqui hay un mono"/> 
+              
+                <span class="Contenedor_figcaption"> Esto es un mono de Indoesia </span><!--Mira lo que ocurre cuando no ponemos la etiqueta figcaption-->
+                Lo pongo asi para que se vea que puede ir sin nada tambien
+        
+
+
+
+                <figure class="Contenedor_figure"> 
+
+                    <img class="Contenedor_Imagen" src="img/mono.jpeg" alt="aqui hay un mono"/> 
+              
+                    <span class="Contenedor_figcaption"> Esto es un mono de Indoesia </span><!--Mira lo que ocurre cuando no ponemos la etiqueta figcaption-->
+                 Lo pongo asi para que se vea que puede ir sin nada tambien
+                </figure>   
+
+
+
+                <figure class="Contenedor_figure"> 
+
+                    <img class="Contenedor_Imagen" src="img/mono.jpeg" alt="aqui hay un mono"/> 
+
+                    <figcaption class="Contenedor_figcaption"> <!--figcaption establece su contenedor bock, por eso se situa debajo, porque la imagen tambien tiene su contenedor, aunque figcaption este dentro de éste-->
+                        Esto es un mono de Indoesia
+                    </figcaption> 
+
+                </figure>   
+
+
+
+                <footer>
+                    <p>Comentarios de usuraios</p>
+                </footer>
+
+            </article> 
+        
+
+
+
+
+            <article>
+
+                <header>
+
+                <hgroup>
+                    <h1>Titulo de la noticia 3 (h1)</h1>
+                    <h2>Subtitulo de la noticia 3 (h2)</h2>
+                </hgroup>
+
+                <!--Time es nueva en html 5, representa fechas y horas 
+                    > Puede llevar atributos:   
+                    datetime, haca refencia a la fecha u hora a la que estas haciendo refencia, la anotación segun el estandar html 5 tiene que ser : datetime="2014-12-30")
+                    pubdate informa de que el atributo de time pertece a uan fecha o a una hora -->       
+                <time datetime="2021/11/01" pubdate >Noticia publicada el 2021/11/01</time> <!--REVISAR-->
+
+                </header>
+
+
+                <p>Podemos ver que el bloque de la dimensión de la propiedad "float" la respetan los contenidos, pero NO los bloques</p>
+
+            
+                <figure id="Contenedor_figure_float_malinki"> 
+
+                    <img class="Contenedor_Imagen" src="img/mono.jpeg" alt="aqui hay un mono" /> 
+
+                    <figcaption class="Contenedor_figcaption">  
+                        Esto es un mono de Indoesia
+                    </figcaption> 
+
+                </figure>   
+
+                <figure class="Contenedor_figure"> 
+
+                    <img class="Contenedor_Imagen" src="img/mono.jpeg" alt="aqui hay un mono"/> 
+
+                    <figcaption class="Contenedor_figcaption">
+                        Esto es un mono de Indoesia
+                    </figcaption> 
+
+                </figure>   
+
+                <figure id="Contenedor_figure_medio"> 
+
+                    <img  class="Contenedor_Imagen" src="img/mono.jpeg" alt="aqui hay un mono"/> 
+
+                    <figcaption class="Contenedor_figcaption">
+                        Esto es un mono de Indoesia
+                    </figcaption> 
+
+                </figure>   
+
+
+                <!---------------------------------------------------------------------------------------->
+                <br/><br/><br/>
+                <hr/>
+
+
+                <figure class="Contenedor_figure_float"> 
+
+                    <img id="img_transition" src="img/mono.jpeg" alt="aqui hay un mono" /> 
+
+                    <figcaption class="Contenedor_figcaption">  
+                        Esto es un mono de Indoesia con transicion
+                    </figcaption> 
+
+                </figure>   
+
+
+
+                <p id="parrafo1">Noticia 3</p>
+                <p id="parrafo2">Seguimos hablando de noticia 3 </p>
+                <p id="parrafo3">Terminamos de hablar de noticia 3</p>
+
+                <!--------------------------------------------------------------------------------------->
+
+                <figure class="Contenedor_figure_float"> 
+
+                    <img id="img_transition" src="img/mono.jpeg" alt="aqui hay un mono" /> 
+
+                    <figcaption class="Contenedor_figcaption">  
+                        Esto es un mono de Indoesia con transicion
+                    </figcaption> 
+
+                </figure>   
+
+
+
+                <p id="parrafo1_clear">Noticia 3</p>
+                <p id="parrafo2">Seguimos hablando de noticia 3 </p>
+                <p id="parrafo3">Terminamos de hablar de noticia 3afdnashfihasfashdfhashñdhasñ
+                jfñjñafñaskñfkasnfkaskbfbalfbkabsklfbaafdnashfihasfashdfhashñdhasñjfñjñafñask
+                ñfkasnfkaskbfbalfbkabsklfbaafdnashfihasfashdfhashñdhasñjfñjñafñaskñfkasnfkaskbf
+                balfbkabsklfbaafdnashfihasfashdfhashñdhasñjfñjñafñaskñfkasnfkaskbfbalfbkabsklfb
+                aafdnashfihasfashdfhashñdhasñjfñjñafñaskñfkasnfkaskbfbalfbkabsklfbaafdnashfihasfa
+                shdfhashñdhasñjfñjñafñaskñfkasnfkaskbfbalfbkabsklfbakl</p>
+
+
+
+                <!--------------------------------------------------------------------------------------->
+
+
+
+
+
+
+                <figure class="Contenedor_figure_float_cluster"> 
+
+                    <img id="Contenedor_Imagen_float" src="img/mono.jpeg" alt="aqui hay un mono" /> 
+
+                    <figcaption class="Contenedor_figcaption">  
+                    Esto es un mono de Indoesia
+                    </figcaption> 
+
+                </figure>   
+
+                <figure class="Contenedor_figure_float_cluster"> 
+
+                    <img class="Contenedor_Imagen" src="img/mono.jpeg" alt="aqui hay un mono" /> 
+
+                    <figcaption class="Contenedor_figcaption">  
+                     Esto es un mono de Indoesia
+                    </figcaption> 
+
+                </figure>
+
+
+
+            </article>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <!--Small a cambiado su semantica, antes era para hacer la letra pequeña, ahora se usa para presentar 
+        textos legales (normalmente en footer) si le damos otros uso no estaremos siguiendo los estándares de html 5-->
+
+        <small>Derechos reservados</small>  
+
+        <!--Se supone que en html 5 la etiqueta adress siempre va en el footer, se coloca tlf o direccion, contacto, email,etc-->
+        <address>tlf:037827878023</address> <!--address coloca lo que se llama en css un blocklevel, un salto de linea antes y despues -->
+   
+    </footer>
+
+
+</body>
+
+</html> <!--------------------------------------->
+
+
+
+

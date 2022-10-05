@@ -1,0 +1,91 @@
+
+body{
+ background-color: rgb(172, 201, 255);
+}
+
+#TituloPrincipal{
+ background-color: rgb(227, 127, 252);
+ text-align: center;
+ border: 3px solid red;
+ width: 500px;
+ margin: auto;
+ border-radius: 10px;
+ box-shadow: cornflowerblue 5px 7px 3px;
+}
+
+@font-face{
+ font-family: 'Mi propia fuente alojada en el servidor';
+ src:url('nombre_de_la_fuente.TTF');
+}
+
+#ElSpanEsParaEsto{
+ font:bold 20px 'Mi propia fuente alojada en el servidor';
+ text-shadow: cornflowerblue 5px 7px 3px;
+}
+
+#NavPrincipal{
+ background-color: rgb(255, 147, 104);  
+ text-align: center; 
+}
+
+ li{
+ display: inline;
+ background-color: rgb(148, 148, 148);
+ } /*display DENTRO DE SU BLOQUE se despliega en linea*/
+
+ #barralateral{
+ background-color: greenyellow;
+ float: left;
+ height: 1180px;
+ } /*float INTERACTUA CON EL CONTENIDO DE OTROS BLOQUES haciendo que éstos rodeen al bloque, y el bloque del float
+ "flota" por encima del otro bloque NO INTERACTUANDO con él*/
+
+#Seccion{
+ background-color: rgb(93, 163, 255);
+ margin: auto;
+ margin-left: 100px;
+ margin-right: 50px;
+}
+
+#FooterPrincipal{
+ background-color: rgb(143, 98, 15);
+ clear: both;
+ } /*clear INDICA QUE EL BLOQUE INTERACTUE con los bloques float colindantes, pero sigue INTERACTUANDO con todos los demás bloques
+ no float*/
+
+
+
+
+p[name="parrafos"]{
+    color: brown;    
+}
+p[name^="parra"]{ 
+    color: brown;    
+} /*Indica que se aplicará a todas las etiquetas con un atributo name que EMPIECE por "parra"*/
+p[name$="parra"]{ 
+    color: brown;    
+} /*Indica que se aplicará a todas las etiquetas con un atributo name que TERMINE por "parra"*/
+p[name$="parra"]{ 
+    color: brown;    
+} /*Indica que se aplicará a todas las etiquetas con un atributo name que CONTENGA "parra"*/
+
+/*Pseudo Clases*/
+p:first-child{
+    color: brown;    
+}
+p:last-child{
+    color: brown;    
+}
+p:only-child{
+    color: brown;    
+}/*Hijas solitarias*/
+p:nth-child(2){
+    color: brown;    
+}
+p:nth-child(odd){
+    color: brown;    
+}/*Lo aplica a todos los hijos IMPARES*/
+p:nth-child(even){
+    color: brown;    
+}/*Lo aplica a todos los hijos PARES*/
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+
+<html> 
+
+    <head> 
+
+        <meta charset="utf-8" /> 
+        <title>Guia HTML</title>
+
+    </head>
+
+    <body> 
+        <h1>Pagina de contacto</h1>
+
+        <ul>
+            <li>    <!--La etiqueta <a><a/> indica que es un enlace y el atributo href DONDE te lleva-->
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="contacto.html">Contacto</a> 
+            </li>
+        </ul>
+
+        <hr/>
+        <!---------------------------------------------------->
+
+        <h1>Tablas</h1>
+        <table border="1">
+            <tr> <!-- Filas -->
+                <td>Nombre</td> <td>Apellidos</td> <td>Web</td> <!-- Columnas -->
+            </tr>
+
+            <tr> 
+                <td>Ej1</td> <td>Ej2</td> <td>Ej3</td> 
+            </tr>
+
+            <tr> 
+                <td>Ej4</td> <td>Ej5</td> <td>Ej6</td> 
+            </tr>
+
+        </table>
+
+        <hr/>
+        <!---------------------------------------------------->
+
+        <h1>Formularios</h1>
+        <p>Formulario de contacto</p>
+
+        <form>
+
+            <label for="">Nombre</label>
+                    <input type="text"/>   <!--Que tipo de input quiero crear, que tipo de CAMPO-->         
+
+            <label for="">Apellidos</label>
+                    <input type="text"/> 
+                    
+            <br/>      
+
+            <label for="">Email</label>
+                    <input type="email"/> <!-- Campo de tipo Email, solo permite introducir Emails-->
+
+                <select>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+
+        <input type="submit" value="Enviar">    <!--El value es el texto que aparecerá-->
+            <!--De tipo enviar-->
+        </form>
+
+    </body>
+
+
+</html>

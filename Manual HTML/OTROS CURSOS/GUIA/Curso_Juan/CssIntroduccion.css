@@ -1,0 +1,334 @@
+/*Los navegadores web (no todos) ya le dan css por defecto a cada una de las etiquetas. POR ESO APLICAMOS EL: Reset CSS */
+
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*___________________________________________________________________Fin Reset CSS*/
+
+
+/*
+>Modelo Caja-Contenedor:
+Hay 2 tipos de etiquetas las block y las Inline.
+>En HTML todas las etiquetas de estructura son block, eso implica que cada vez que creas 
+una etiqueta, realmente creas una caja que ocupa el 100% de la pantalla y aplica un salto de linea
+por eso todas las etiquetas en HTML se van colocando una debajo de otra
+
+(Los elementos que se encuentras dentro de los blocks TAMBIEN tienen estructura block) */
+
+
+
+
+/*Selector de Etiqueta*/
+body{
+    background-color: aqua;
+    font-size: 110%;
+}
+
+
+/*CHUCHERIAS CSS3: PseuoClases***********************************/
+/*p ^ : {
+
+} */
+
+
+
+#cabeceraweb{ /*selector ID*/
+   
+    /*Block***********************************/
+    width: 350px;   
+    background-color: blueviolet;
+    margin: 15px auto; /*(top-bot-R-L) | (top-bot) (R|L) |  (top) (R) (bot) (L) sentido del reloj, el auto lo ajusta en proporción*/
+    padding: 15px;
+  
+    /*CSS3***********************************/
+
+    border: 2px solid crimson;
+    border-radius:  30px;
+    box-shadow: rgb(201, 241, 19) 40 px 300 px 30px;
+
+    /*Texto***********************************/   
+    
+    color: burlywood;
+    text-align: center;
+    font-family: 'monospace', Courier, monospace;
+}
+
+
+
+
+
+nav {
+    background-color: coral;
+    
+}
+
+ul{
+    background: rgb(97, 50, 6);
+}
+
+li{ /*Por defecto es block*/
+    background-color: gold;
+    width: 10%;   /* los elementos inline sudan de los atributos para blocks*/
+    height: 10%; /* los elementos inline sudan de los atributos para blocks*/
+    margin: 10px 20px; /*inline solo hace caso a los margenes R y L*/
+    padding: 20px;
+
+
+   /* Si quieres que haga caso a los valores block pero que se mantengan inline, tienes que poner: */
+   /*display: inline-block;
+
+    /*Los elementos que sean inline por defecto como los <span> se pueden transformar automaticamente a blockes
+    si los pongo como float left, si pongo display: inline !important forzandolo a que sea inine, saldrá inline pero 
+    como blockes, digamos a display float le gustan los blockes
+
+
+
+    /*Block***********************************/
+    display: inline; /*Conviertelo en inLine, ahora se pondrá uno al lado del otro ocupando lo que ocupe el ancho del texto*/
+}
+
+
+
+
+aside{
+    background-color: crimson;
+    
+
+    /*Block***********************************/
+
+    float: left;
+    border: solid purple 3px ;
+    /*La propiedad float, en este caso float:left. Rompe el flujo de como se colocan los elementos por defecto en una pagina web
+    haciendo que flote en una dimension flotante por encima del bloque siguiente que tenga en html, tambien hará que no ocupe el 100% del ancho de la pantalla, sino que ocupe solo el ancho correspondiente al texto.
+    LO IMPORTANTE ES QUE EL RESTO DE ELEMENTOS QUE HAYA POR DEBAJO RESPETARÁn SU DIMENSION AUNQUE ÉSTOS NO SEAN FLOAT
+    
+    Si dos elementos estan en float ambos estan en la misma dimension, evidentemente
+    
+    */
+
+    height:1020px;
+
+    /*Texto***********************************/ 
+    
+    
+
+
+}
+
+
+section{
+    /*Block***********************************/
+    background-color: rgb(38, 93, 129);
+    
+    width: 80%; /*resècto al 100% del bloque NO de la pantalla*/
+
+    border-top: 5px dashed rgb(0, 0, 0);
+
+    margin: 15px auto; /*  <-- Ojo como todo código se lee de arriba a abajo, primero lee este y luego se sobreescribe con el de abajo, pero como en el de abajo no he modificado el margen de arriba y abajo pues se queda con este */
+    margin-left: 200px; /*desde el marco de la pantalla para que no se quede por debajo del float del aside*/
+
+
+   /*  float: left; <-- si lo pusiera en la dimensión del float, se pondrá todo el section al lado del aside*/ 
+    
+}
+
+
+
+
+header{
+    
+    background-color: blue;
+}
+
+hgroup{
+    background-color: royalblue;
+}
+
+
+h1{
+    /* En CSS esto se llama nomenclatura abreviada, en donde se especifican todas las propiedades que yo queira */
+
+    font: normal 2.4em Verdana;/* "em", hace referencia al tamaño que tiene que tener la letra, la unidad de CSS "em" es un MULTIPLICADOR:  1em = 5x1em= 5 (no la modifico nada) | 2em = 5x2em= 10 (he duplicado el tamaño) | 1.5em = 5x1.5em = 5.5 (aumento la mitad de la letra) */
+    
+    
+    
+}
+
+
+h2{
+    
+    /*Block***********************************/ 
+    width: 50%;
+    border: salmon solid 3px ;
+    border-radius: 10px; /* No me dejaba integrarlo como nomenclatura abreviada en border, quizas sea que como es nueva aun no esta bien integrada */
+
+    margin: auto auto; /*da igual la resolución de pantalla que tengas porque el navegador calcula la porpiedad auto 
+        /* ojo auto solo sirve para L y R , se puede ver que no hace nada en Top y Bot*/
+
+    padding: 15px;
+
+    /*Texto***********************************/ 
+    font-family: 'monospace', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold; /*Lo más correcto para hacer la letra negrita*/
+    color: seashell;
+
+
+  /* a mi no me funciona lo de la sombra
+  
+  box-shadow: rgb(255, 0, 0) 10x 20px 5px; /*Distancia horizontal del sombreado | Distancia vertical del sombreado | Difuminado
+      text-shadow: springgreen; 10x 20px 5px;
+  */
+}
+
+
+h3{
+    font: 3em Georgia, "Times New Roman"; /*el color por algun motivo no me deja ponerlo en nomenclatura abreviada*/
+    color:rgb(238, 12, 136)
+}
+
+#degradado{
+    background: -webkit-linear-gradient(top, rgb(112, 238, 8) , rgb(17, 124, 224))
+    
+}
+
+
+
+/*****************************************/
+
+
+/*
+figure img { /* img hijas de figure
+
+} */
+
+
+
+figure img:hover{ /*pseudoclase*/ /*Establece una serie de propiedades, pero solo al estado hover de una img hija de figure*/
+-webkit-transform: scale(1.2); /*esto también es un MULTIPLICADOR*/
+
+}
+
+.Contenedor_figure{
+   border: 3px solid; 
+   border-color: rgb(245, 124, 10); 
+}
+
+.Contenedor_figcaption{
+    border: 2px solid red;
+}
+
+.Contenedor_Imagen{
+    border: 2px solid red;
+}
+
+/*------------------------------------------------*/
+
+
+#Contenedor_figure_float_malinki{
+    float: left;
+    width: 20%;
+    height: 600px;
+    
+    border: 3px dashed; 
+    border-color: rgb(10, 171, 245); 
+}
+/*_________________________________*/
+
+
+#Contenedor_figure_medio{
+    border: 3px solid; 
+    border-color: rgb(245, 124, 10); 
+    width: 500px;
+}
+
+
+/*****************************************/
+
+
+
+.Contenedor_figure_float{
+
+    border: 3px solid; 
+    border-color: rgb(245, 124, 10); 
+    float: left;
+    
+}
+
+#img_transition{
+  /*  -webkit-transition: -webkit- transform 0.3s ease-in-out 0.1s; */
+  transition-duration: 1s;
+}
+
+#parrafo1{
+    background: rgb(229, 255, 0);
+    text-align: center;
+}
+
+#parrafo2{
+    background: rgb(255, 86, 86);
+    font-size: 2em;
+}
+
+#parrafo3{
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/*****************************************/
+
+#parrafo1_clear{
+    clear: left; /*La propiedad clear: left hace que el bloke RESPETE a los blokes float, tambien se puede poner both*/
+    background:rgb(179, 182, 32)
+
+
+}
+
+/*****************************************/
+
+.Contenedor_figure_float_cluster{
+
+    border: 3px solid; 
+    border-color: rgb(245, 124, 10); 
+    float: left;
+    width: 300px;
+}
+
+#Contenedor_Imagen_float{
+    float: left;
+    width: 100px;
+    height: 200px;
+}
+
+
+/*****************************************/
+
+footer {
+    background-color: darkorange;
+    clear: both;
+    margin-top: 50px;
+}       
+
+

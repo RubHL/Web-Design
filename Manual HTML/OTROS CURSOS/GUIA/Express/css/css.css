@@ -1,0 +1,77 @@
+/* Cascading Style Sheets (Hojas de Estilo en Cascadas) */
+/* DEFINIR/CREAR la presentadión de un documento de HTML */
+/* DA FORMATO/FORMA/ESTILO A UNA PAGINA WEB */
+
+
+*{ /*Si selecciono todos los elementos puedo Resetear ciertos elementos que vienen por defecto en el navegador */
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background: lightblue; /*Hay mucho colores expresados en texto, pero NO todos */
+    font-family: Arial, Helvetica, sans-serif; /* Toda la pagina tendra de izq a derech la fuente indicada, si el que visita la web no tiene instalada la fuente en su equipo*/
+}
+
+#container{
+    width: 70%;
+  /*width: 1100px;*/
+    margin: 0px auto;
+    border: 1pt solid rgb(0, 0, 0);
+}
+
+header{
+    background: red;
+    height: 100px;  /*misma anchura que line-height*/
+    width: 100%;
+    margin: 0px;
+    
+    text-align: center;
+    line-height: 100px; /* como es la misma altura que tiene la caja, el texto se pondrá en medio */
+    color: seashell; /* color solo afecta al texto */
+    border-bottom: 3px dashed black ;
+}
+
+nav ul li{
+    float:left; /* Cada uno de los elementos se "flotarán" a la izq (se veran unos al lado del otro aplastados entre sí*/
+    list-style: none; /* Elimina los estilos que tuviera por defecto para que no tengan ningún tipo de estilo */
+    margin: 10px; /* les proporciona un margen para darles espacio vital y poder verlos */
+    line-height: 30px;
+    border:  1px solid black;
+}
+
+nav{
+    background: aqua; /* si solo pongo el color no se va a ver, hay que darle una alto o un ancho */
+    height: 50px;
+}
+
+.clearfix{
+    clear: both; /* cuando floto los elementos, los elementos de abajo se quedan en su sitio */
+}
+
+#content{
+    float: left; /* para que se me vaya a la izquierda */
+    width: 80%;
+    background: lightgreen;
+
+    min-height: 500px; /*altura minima*/
+}
+
+aside {
+    float:left; /* tambien, para que se me colque al lado*/
+    width: 20% ;
+    background: orange;
+    min-height: 500px;
+    
+    
+}
+
+footer{
+    background: black;  /*fondo*/
+    color: blanchedalmond;/*texto*/
+    text-align: center; /*texto*/
+    height:  50px; /*fondo*/
+    line-height: 50px; /*texto*/
+
+}
