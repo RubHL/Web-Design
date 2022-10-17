@@ -33,18 +33,43 @@
 //      2.	Crea una página Web que muestre la fecha y hora actual con el siguiente formato:
 //                  Hoy es lunes, 28 de Noviembre de 2022 y son las 14:32 horas
 
+    document.write("<br><br><hr><br><br>");
     var fecha = new Date(); 
+   
+    document.write("Hoy es "+ fecha.getDay() );
 
 //      3.	Crea una página Web que indique si el Documento Nacional de Identidad introducido por un usuario es correcto o no mediante un mensaje en una ventana emergente.
 //     El cálculo de la letra del DNI es un proceso matemático sencillo que se basa en obtener el resto de la división entera del número de DNI y el número 23. A partir del resto de la división, se obtiene la letra seleccionándola dentro de un string de letras.
 //     El string de letras es: 'TRWAGMYFPDXBNJZSQVHLCKET'.
 //     Por tanto, si el resto de la división es 0, la letra del DNI es la T o si el resto es 3, la letra es la A
 
-    
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 
+var dni, letra_in, letra_calculada;
+
+function input_dni() {
+    dni = parseInt(prompt('Introduce el número del DNI'));
+    letra_in = prompt('Introduce la letra').toUpperCase();
+
+    if ((dni >= 0) && (dni <= 99999999)) {
+        letra_calculada = letras[dni%23];
+        if (letra_in == letra_calculada) {
+            document.getElementById('resultado').innerHTML = "<p style='color:red;font-size:1.6em'>El dni es " + dni + " con letra " + letra_calculada + '</p>';
+            alert('El dni es ' + dni + ' con letra ' + letra_calculada);
+        } else {
+            alert('La letra ' + letra_in + ' no coincide con la calculada → ' + letra_calculada) ;
+        }
+    } else {
+        alert('No es correcto el valor introducido');
+    }
+}
+
+document.write("<button type='button' onclick='input_dni()'>Click Me!</button>");
 
 //      4.	Crea una página Web que muestre el valor en píxeles de la diagonal de la pantalla del usuario (raíz cuadrada de la suma del cuadrado de la anchura más el cuadrado de la altura). Además, muestre el texto en color blanco, el fondo en gris y el título de la página sea “Varios objetos predefinidos de JS”.
 //      Puedes ayudarte de los objetos Screen, Math y Document.
+
+
 
 
 </script>

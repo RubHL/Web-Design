@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Seleccion_por_TagName() {    
+            for(i=0;i<3;i++){                          //Si no lo pongo en funcion, salta solo
+            document.getElementsByTagName("p")[i].onclick=function(){alert("ok");}
+            }
+        };
+        
+        var imagen= new Array(3);
+        function EventListener_Completo(){
+            for(i=0;i<3;i++){
+                imagen[i]=document.getElementsByTagName("img")[i];
+
+            imagen[i].addEventListener("click",function() {alert("hi")},false);
+                                                            //Por algun motivo, esto no se incluye a todos
+            imagen[i].addEventListener("mouseover",function() {imagen[i].width=500;imagen[i].height=500;},false);
+            imagen[i].addEventListener("mouseout",function() {imagen[i].width=200;imagen[i].height=200;},false);
+            }
+    
+
+        }
+        
+
+
+        window.addEventListener("load",Seleccion_por_TagName,false);
+        window.addEventListener("load",EventListener_Completo,false);
+        // window.onload=Seleccion_por_TagName;
+
+    </script>
+</head>
+<body>
+
+    <p>parrafo 1</p>
+    <p>parrafo 2</p>
+    <p>parrafo 3</p>
+
+    <img src="imagenes/casa.png" alt="">
+    <img src="imagenes/carretilla.png" alt="">
+    <img src="imagenes/casa-de-perro.png" alt="">
+    
+</body>
+</html>
