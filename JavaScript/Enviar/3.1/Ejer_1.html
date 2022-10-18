@@ -1,0 +1,61 @@
+<!-- 1.	Comprueba si una cadena de texto introducida por el usuario está formada
+     sólo por mayúsculas, sólo por minúsculas o por ambas simultáneamente mediante una función. -->
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+     </head>
+     <body>
+
+        <script>
+            var palabra = prompt("Introduzca la palabra");
+            var contmay = 0;
+            var espacios = 0;
+            
+
+            function contador(palabra){
+                
+
+                for(var i = 0; i < palabra.length ; i++){
+                    if(palabra.charAt(i) == palabra.toUpperCase().charAt(i) && palabra.charAt(i)!= ' '){
+                    contmay++;
+                    }
+                    if(palabra.charAt(i) == ' '){
+                    espacios++;
+                    }
+                }
+
+                var salida=[];
+                salida[0]=contmay;
+                salida[1]=espacios;
+                
+            return salida;
+            }
+
+            var datos=[];
+
+            datos=contador(palabra);
+            contmay = datos[0];
+            espacios= datos[1];
+            var tamaño = palabra.length-espacios;
+            var minusculas =tamaño - contmay;
+
+                if(contmay == tamaño){
+                    alert ("son todas mayúsculas");
+                }else {
+                    if(minusculas == tamaño){
+                        alert("Son todas minúsculas");
+                    }else {
+                        alert("Hay "+contmay+" mayúsculas y "+ minusculas +" minúsculas");
+                    }
+                }
+
+
+        </script>
+        
+     </body>
+     </html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="archivo_script.js"></script>
+
+    <script>
+        // SELECCION DE ETIQUETAS HTML ==============================================
+
+        //alert("desde el head");
+        //--------------------------------------
+        function ventana_modal() {
+            alert("desde el head");}
+        //--------------------------------------
+        function Seleccion_por_TagName() {     //Devuelve un Array
+            document.getElementsByTagName("p")[0].onclick=ventana_modal;
+            for(i=0;i<3;i++){
+            document.getElementsByTagName("p")[i].onclick=ventana_modal;
+            }
+        }
+
+
+            window.onload=Seleccion_por_TagName;
+        
+        
+
+        //--------------------------------------
+        function Seleccion_por_ID(){
+        document.getElementById("p_ejemplo").onclick=ventana_modal;
+        }
+        //--------------------------------------
+        function Seleccion_por_Clase(){
+        //ByClassName necesita almacenar en una variable
+        var elemento= document.getElementsByClassName("parraf")[0].onclick=ventana_modal; 
+        for(i=0;i<3;i++){
+            var elemento= document.getElementsByClassName("parraf")[i].onclick=ventana_modal;}
+        }
+        //--------------------------------------
+        function Seleccion_por_CSS(){
+        //devuelve el primer elemento que coincida
+        document.querySelector(".p_especial").onclick=ventana_modal;
+        document.querySelector("#contendor p").onclick=ventana_modal;
+        document.querySelector("#contendor p:last-child").onclick=ventana_modal;
+        //devuelve todos los elemento que coincidan,*requiere variable
+        var elemento_de_array=document.querySelectorAll("#contendor p")[0].onclick=ventana_modal;
+            for(i=0;i<3;i++){
+                var elemento_de_array=document.querySelectorAll("#contendor p");
+                elemento_de_array[i].onclick=ventana_modal;
+            }
+
+            //guarda todos los elementos de golpe
+            var elemento_de_array=document.querySelectorAll("#contendor p, span");
+            for(i=0;i<elemento_de_array.length;i++){
+                elemento_de_array[i].onclick=ventana_modal
+            }
+        }
+        
+        // MANEJAR EVENTOS ==============================================
+        var i=0
+        function mono(){
+            if(i==0){
+            alert("macako inline");
+            i++
+            }else{
+            alert("macako desde head");   
+            }
+        }
+
+        var imagen //Al declarar la variable fuera de las funciones, me permite usarla en todas las funciones
+                   //porque si estuviera declarada dentro de una funcion solo tendria autoridad ahi
+       
+        function EventListener(){
+            imagen=document.getElementsByTagName("img")[0];
+            
+            imagen.addEventListener("click",mono,false);
+            imagen.addEventListener("mouseover",crecer,false);
+            imagen.addEventListener("mouseout",menguar,false);
+        }
+
+        function crecer(){
+            imagen.width=500;
+            imagen.height=500;
+        }
+        function menguar(){
+            imagen.width=200;
+            imagen.height=200;
+        }
+        
+
+        window.onload=EventListener;
+
+        //===========================================
+
+        var imagen= new Array(3);
+
+        function EventListener_Completo(){
+        for(i=0;i<4;i++){
+                imagen[i]=document.getElementsByTagName("img")[i];
+            }
+            imagen[0].addEventListener("click",mono,false);
+            imagen[0].addEventListener("mouseover",function() {imagen[0].width=500;imagen[0].height=500;},false);
+            imagen[0].addEventListener("mouseout",function() {imagen[0].width=200;imagen[0].height=200;},false);
+
+            imagen[1].addEventListener("click",mono,false);
+            imagen[1].addEventListener("mouseover",function() {imagen[1].width=500;imagen[1].height=500;},false);
+            imagen[1].addEventListener("mouseout",function() {imagen[1].width=200;imagen[1].height=200;},false);
+
+            imagen[3].addEventListener("click",mono,false);
+            imagen[3].addEventListener("mouseover",function() {imagen[3].width=500;imagen[3].height=500;},false);
+            imagen[3].addEventListener("mouseout",function() {imagen[3].width=200;imagen[3].height=200;},false);
+        }
+
+        window.addEventListener("load",EventListener_Completo,false);
+
+    </script>
+
+    <style>
+        #p_ejemplo{
+            background-color: red;}
+        #p_ejemplo:hover{
+            font-size: 1.2em;
+            text-shadow: rgb(255, 0, 0) 0px 0px 5px;}
+        span{
+            font-size: 0.8em;}
+    </style>
+</head>
+
+<body>
+
+    <input type="button" value="activar" onclick="Activar_Window_onload()">
+
+    <!--Evento inline-->
+    <p>test</p>
+    <p id="p_ejemplo" onclick="alert('Ventana con propiedad modal, detiene la lectura del codigo ');"> Texto de alert con propiedad modal
+    <span>(al ser un elemento en bloque, da igual donde pulses)</span></p>
+    <!--Demasiados eventos inline relentizan la carga de la pagina, se recomienda linkar a una hoja externa-->
+    
+    <p class="parraf">ejemplo</p>
+
+    <div id="contenedor">
+        <p>Parrafo 1</p>
+        <p class="p_especial">Parrafo 2</p>
+        <p>Parrafo 3</p>
+        <p class="p_especial">Parrafo 4</p>
+    </div>
+
+
+
+    <!-- Evento inline (usuario) -->
+    <img src="imagenes/mono.jpg" alt="" style="width: 300px;"  onclick="mono()" >
+
+
+
+
+
+
+
+
+
+
+
+
+    <p onmouseover="ventana_modal()">Alert</p>
+</body>
+</html>
